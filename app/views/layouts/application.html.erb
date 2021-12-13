@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Blogproject</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+      <% if user_signed_in? %>
+      <p>Hello <%= current_user.email %></p>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "sign in", new_user_session_path %>
+      <%= link_to "sign up", new_user_registration_path %>
+    <% end %>
+    <hr> 
     <%= yield %>
   </body>
 </html>
