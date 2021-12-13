@@ -25,7 +25,8 @@ class BlogReviewsController < ApplicationController
 
     respond_to do |format|
       if @blog_review.save
-        format.html { redirect_to @blog_review, notice: "Blog review was successfully created." }
+        url = "/blogs/" + @blog_review.blog_id.to_s
+        format.html { redirect_to url, notice: 'Blog comment was successfully created.' }
         format.json { render :show, status: :created, location: @blog_review }
       else
         format.html { render :new, status: :unprocessable_entity }
