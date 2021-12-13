@@ -1,0 +1,32 @@
+<%= form_with(model: blog_review, local: true) do |form| %>
+  <% if blog_review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blog_review.errors.count, "error") %> prohibited this blog_review from being saved:</h2>
+
+      <ul>
+        <% blog_review.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blog_id %>
+    <%= form.number_field :blog_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :review %>
+    <%= form.text_area :review %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

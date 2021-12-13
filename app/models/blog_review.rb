@@ -1,0 +1,2 @@
+class BlogReview < ApplicationRecord
+end
