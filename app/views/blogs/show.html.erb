@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 <p>
   <% if @blog.image.attached? %>
+      <strong>Image:</strong>
     <%= image_tag @blog.image %>
   <% end %>
 </p>
@@ -13,6 +14,9 @@
   <strong>Description:</strong>
   <%= @blog.description %>
 </p>
-
+<p>
+  <strong>Description2:</strong>
+  <%= @blog.description2 %>
+</p>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
