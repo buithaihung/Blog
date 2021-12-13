@@ -28,5 +28,11 @@
     <%= form.submit %>
   </div>
 <% end %>
+<h2>Review List</h2>
+<ul>
+  <% @blog.blog_review.each do |blog_review|%>
+   <li><%= blog_review.review%></li>
+<% end %>
+</ul>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
