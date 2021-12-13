@@ -1,8 +1,13 @@
 <h1>profile</h1>
-<h3>名前</h3>
+<p>
+  <% if @user.avatar.attached? %>
+    <%= image_tag @user.avatar %>
+  <% end %>
+</p>
+<h3>Name</h3>
 <%= @user.name %>
 
-<h3>年齢</h3>
+<h3>Age</h3>
 <%= @user.age %>
 <h3>mail address</h3>
 <%= @user.email %>
