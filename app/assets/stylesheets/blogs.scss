@@ -1,3 +1,68 @@
-// Place all the styles related to the Blogs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.btn-add-blogs{
+    a{
+        width: 160px;
+        float:right;
+        font-size: 18px;
+        border: 1px solid #dcdcdc;
+        padding:8px 8px 8px 28px;
+        background-color: black;
+        color: white !important;
+        border-radius: 15px;
+    }
+    
+    
+}
+.read-more{
+    a{
+        float: right;
+        border-radius: 10px;
+        border: 1px solid gainsboro;
+        padding: 10px;
+        background-color: blue;
+        color: white  !important;
+    }
+
+}
+
+.read-more>a:hover{
+    text-decoration: none;
+
+
+}
+.list-blogs{
+    padding-top: 43px;
+    .card{
+        margin-bottom: 15px;
+        margin-top: 15px;
+        border: 1px solid rgb(241, 232, 232);
+        border-radius: 10px;
+        img{
+            width: 100%;
+            height: 300px;
+            border-radius: 10px 10px 0px 0px;
+        }
+        .card-body{
+            padding:10px;
+            .card-title{
+                font-size: 20px;
+                font-weight: 800;
+                letter-spacing: -0.5px;
+                line-height: 1.4;
+                font-family:'Times New Roman', Times, serif;
+
+            }
+        }
+        .actions-blog{
+            a{
+                padding:0px;
+                margin: 15px 8px
+                
+            }
+            i{
+                font-size: 18px;
+                color: black !important;
+            }
+            
+        }
+    }
+}
