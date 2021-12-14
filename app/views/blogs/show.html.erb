@@ -40,7 +40,7 @@
       <h3 class="title">List Comment</h3>
       <ul class="nav nav-pills nav-stacked">
       <% @blog.blog_review.each do |blog_review|%>
-        <li role="presentation"><a href="#"><%= blog_review.review %></a></li>
+        <li role="presentation"><a href="#"><%= blog_review.review %> reviewer: <i><%= blog_review.user.name%></i></a></li></li>
     <% end %>
     </ul>
       </div>
