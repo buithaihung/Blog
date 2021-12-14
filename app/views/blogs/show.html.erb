@@ -1,38 +1,55 @@
 <p id="notice"><%= notice %></p>
-<p>
-  <% if @blog.image.attached? %>
-      <strong>Image:</strong>
-    <%= image_tag @blog.image %>
-  <% end %>
-</p>
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @blog.description %>
-</p>
-<p>
-  <strong>Description Detail:</strong>
-  <%= @blog.description2 %>
-</p>
-<h2>Review From<h2>
-<%= form_with(model: @blog_review, local: true) do |form| %>
-  <div class= "field">
-    <%= form.text_area :review %>
-    <%= form.hidden_field :blog_id, :value => @blog.id %>
-  </div>
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-<h2>Review List</h2>
-<ul>
-  <% @blog.blog_review.each do |blog_review|%>
-   <li><%= blog_review.review%></li>
-<% end %>
-</ul>
+
+
+<div class="blogs-details">
+
+    <h1 class="title">Blog Details</h1>
+    <div class="details">
+        <div class="row">
+            <div class="col-md-5">
+                <% if @blog.image.attached? %>
+                  <%= image_tag @blog.image %>
+                <% end %>
+            </div>
+            <div class="col-md-7">
+              <h3 class="title">Blogs About <%= @blog.title %></h3>
+              <p>Description : <%= @blog.description %></p>
+              <p>Details</p>
+              <span> <%= @blog.description2 %></span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="review-form">
+      <h3 class="title">Comment about blogs</h3>
+      <div class="comment">
+      <%= form_with(model: @blog_review, local: true) do |form| %>
+        <div class= "field">
+          <%= form.text_area :review, placeholder:"Enter input your comment....", class:"comment-form" %>
+          <%= form.hidden_field :blog_id, :value => @blog.id %>
+        </div>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      <% end %>
+
+      </div>
+      <div class="list-comments">
+      <ul class="nav nav-pills nav-stacked">
+      <% @blog.blog_review.each do |blog_review|%>
+        <li role="presentation"><a href="#"><%= blog_review.review %></a></li>
+    <% end %>
+    </ul>
+      </div>
+
+
+    </div>
+
+</div>
+
+
+
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>

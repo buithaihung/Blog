@@ -66,3 +66,42 @@
         }
     }
 }
+
+.blogs-details{
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+    .review-form{
+        .comment-form{
+            width: 100%;
+            padding: 16px;
+            border-radius: 15px;
+        }
+        .actions{
+            float: right;
+            input{
+                font-size: 16px;
+                background-color: black;
+                border: 1px solid gray;
+                border-radius: 10px;
+                padding: 12px;
+                color: white;
+
+            }
+            
+           
+        }
+        .list-comments{
+            padding: 30px;
+            li {
+                margin-top: 20px;
+                a{
+                    font-size: 20px;
+                    color: black;
+                }
+            }
+        }
+    }
+}
