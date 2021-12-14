@@ -12,7 +12,9 @@
     <% @blogs.each do |blog| %>
       <div class="col-md-4">
             <div class="card">
-              <%= image_tag blog.image %> 
+                <% if blog.image.attached? %>
+              <%= image_tag blog.image %>
+                 <% end %>
              <div class="card-body">
               <h5 class="card-title"> <%= blog.title %></h5>
               <p class="card-text">Description : <%= blog.description%></p>
