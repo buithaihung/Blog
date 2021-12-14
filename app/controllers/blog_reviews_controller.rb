@@ -22,7 +22,7 @@ class BlogReviewsController < ApplicationController
   # POST /blog_reviews or /blog_reviews.json
   def create
     @blog_review = BlogReview.new(blog_review_params)
-
+    @blog_review.user_id = current_user.id
     respond_to do |format|
       if @blog_review.save
         url = "/blogs/" + @blog_review.blog_id.to_s
