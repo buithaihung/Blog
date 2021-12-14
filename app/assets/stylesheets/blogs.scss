@@ -94,14 +94,20 @@
            
         }
         .list-comments{
-            padding: 30px;
+            padding: 20px;
             li {
-                margin-top: 20px;
                 a{
                     font-size: 20px;
                     color: black;
                 }
             }
         }
+    }
+}
+
+.form-blogs{
+    label{
+        width: 80px;
+        font-size: 16px;
     }
 }

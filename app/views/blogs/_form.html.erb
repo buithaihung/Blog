@@ -1,3 +1,4 @@
+<div class="form-blogs">
 <%= form_with(model: blog, local: true) do |form| %>
   <% if blog.errors.any? %>
     <div id="error_explanation">
@@ -32,3 +33,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+</div>
