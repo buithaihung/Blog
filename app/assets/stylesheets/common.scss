@@ -1,0 +1,62 @@
+.title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 3;
+}
+
+.container{
+    margin-top: 50px;
+    .common-form{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-bottom: 15px;
+        padding-right: 50px;
+    
+        .field {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .input-data-event{
+                padding: 25px;
+        
+            }
+            label{
+    
+            
+        
+            }
+            i{
+                width: 30px;
+                font-size: 15px;
+            }
+    
+    
+        }
+    
+        .actions{
+            text-align: center;
+            input{
+                text-align: center;
+                padding:5px;
+                font-size: 16px;
+                width: 160px;
+            }
+        }
+        .btn-hover>a:hover{
+            text-decoration: none;
+            background-color: bisque;
+        }
+    
+        .footer-form{
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 10px;
+            line-height: 2;
+    
+        }
+    }
+}
+
